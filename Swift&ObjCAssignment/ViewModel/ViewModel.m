@@ -19,15 +19,18 @@
     self.accounts = accounts;
 }
 - (void) parseJSON {
-    NSData* data = [NSData dataWithContentsOfFile:@"accounts"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"json"];
+      
+    NSData* data = [NSData dataWithContentsOfFile:path];
     NSError *e = nil;
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: &e];
+    id json = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &e];
     
-    if (!jsonArray) {
+    if (!json) {
         NSLog(@"Error parsing JSON: %@", e);
     } else {
-        for(NSDictionary *item in jsonArray) {
-            NSLog(@"Item: %@", item);
+        for (NSDictionary* d in json) {
+            Account* a = [[Account alloc]initWithDictionary:d];
+            NSLog(@"Doing some json parsing %@", [a getAccountName]);
         }
     }
 }

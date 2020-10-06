@@ -15,6 +15,7 @@
 		D76F2B2A252CFED800B99107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76F2B28252CFED800B99107 /* LaunchScreen.storyboard */; };
 		D76F2B37252D000400B99107 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F2B36252D000400B99107 /* Account.m */; };
 		D76F2B3B252D045600B99107 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F2B3A252D045600B99107 /* ViewModel.m */; };
+		D76F2B41252D1B5200B99107 /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = D76F2B40252D1B5100B99107 /* accounts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D76F2B39252D045600B99107 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		D76F2B3A252D045600B99107 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		D76F2B3F252D105100B99107 /* Swift:7ObjCAssignment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift:7ObjCAssignment-Bridging-Header.h"; sourceTree = "<group>"; };
+		D76F2B40252D1B5100B99107 /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				D76F2B23252CFED800B99107 /* Main.storyboard */,
 				D76F2B21252CFED800B99107 /* ViewController.swift */,
+				D76F2B3F252D105100B99107 /* Swift:7ObjCAssignment-Bridging-Header.h */,
 				D76F2B38252D001700B99107 /* Model */,
 				D76F2B3C252D046300B99107 /* ViewModel */,
 				D76F2B1F252CFED800B99107 /* SceneDelegate.swift */,
@@ -72,6 +75,7 @@
 				D76F2B26252CFED800B99107 /* Assets.xcassets */,
 				D76F2B28252CFED800B99107 /* LaunchScreen.storyboard */,
 				D76F2B2B252CFED800B99107 /* Info.plist */,
+				D76F2B40252D1B5100B99107 /* accounts.json */,
 			);
 			path = "Swift&ObjCAssignment";
 			sourceTree = "<group>";
@@ -90,7 +94,6 @@
 			children = (
 				D76F2B39252D045600B99107 /* ViewModel.h */,
 				D76F2B3A252D045600B99107 /* ViewModel.m */,
-				D76F2B3F252D105100B99107 /* Swift:7ObjCAssignment-Bridging-Header.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76F2B2A252CFED800B99107 /* LaunchScreen.storyboard in Resources */,
+				D76F2B41252D1B5200B99107 /* accounts.json in Resources */,
 				D76F2B27252CFED800B99107 /* Assets.xcassets in Resources */,
 				D76F2B25252CFED800B99107 /* Main.storyboard in Resources */,
 			);
@@ -325,7 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.rjch.Swift-ObjCAssignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift&ObjCAssignment/Swift&ObjCAssignment-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/theappexperts/SwiftProjects/Swift&ObjCAssignment/Swift&ObjCAssignment/Swift:7ObjCAssignment-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,7 +350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eu.rjch.Swift-ObjCAssignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift&ObjCAssignment/Swift&ObjCAssignment-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/theappexperts/SwiftProjects/Swift&ObjCAssignment/Swift&ObjCAssignment/Swift:7ObjCAssignment-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -13,16 +13,19 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Account : NSObject
 
 @property (nonatomic) NSString* accountName;
-@property (nonatomic) NSInteger* accountNumber;
+@property (nonatomic) NSString* accountNumber;
 @property (nonatomic) NSString* accountBalance;
 
+- (Account*)initWithDictionary:(NSDictionary*) d;
+
 - (void)setAccountName:(NSString * _Nonnull)accountName;
-- (void)setAccountNumber:(NSInteger * _Nonnull)accountNumber;
+- (void)setAccountNumber:(NSString * _Nonnull)accountNumber;
 - (void)setAccountBalance:(NSString * _Nonnull)accountBalance;
+
 
 - (NSString*)getAccountName;
 - (NSString*)getAccountBalance;
-- (NSInteger*)getAccountNumber;
+- (NSString*)getAccountNumber;
 
 @end
 

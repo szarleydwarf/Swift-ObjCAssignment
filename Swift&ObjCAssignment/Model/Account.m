@@ -12,11 +12,20 @@
 
 @synthesize accountName, accountNumber, accountBalance;
 
+- (Account*)initWithDictionary:(NSDictionary*) d {
+    accountName = d[@"kind"];
+    accountNumber = d[@"number"];
+    accountBalance = d[@"balance"];
+    
+    return self;
+}
+
+
 - (void)setAccountName:(NSString *)accountName {
     self.accountName = accountName;
 }
 
-- (void)setAccountNumber:(NSInteger * _Nonnull)accountNumber {
+- (void)setAccountNumber:(NSString * _Nonnull)accountNumber {
     self.accountNumber = accountNumber;
 }
 
@@ -32,7 +41,7 @@
     return self.accountBalance;
 }
 
-- (NSInteger*)getAccountNumber {
+- (NSString*)getAccountNumber {
     return self.accountNumber;
 }
 

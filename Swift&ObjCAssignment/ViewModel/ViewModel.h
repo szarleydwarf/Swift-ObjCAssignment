@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray*)getAccounts;
 - (void) setAccounts:(NSArray<Account *> * _Nonnull)accounts;
-
+- (void) parseJSON;
 @end
 
 NS_ASSUME_NONNULL_END
