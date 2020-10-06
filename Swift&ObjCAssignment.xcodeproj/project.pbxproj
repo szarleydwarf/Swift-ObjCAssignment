@@ -14,6 +14,7 @@
 		D76F2B27252CFED800B99107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D76F2B26252CFED800B99107 /* Assets.xcassets */; };
 		D76F2B2A252CFED800B99107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76F2B28252CFED800B99107 /* LaunchScreen.storyboard */; };
 		D76F2B37252D000400B99107 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F2B36252D000400B99107 /* Account.m */; };
+		D76F2B3B252D045600B99107 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D76F2B3A252D045600B99107 /* ViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,9 @@
 		D76F2B2B252CFED800B99107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D76F2B35252D000400B99107 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		D76F2B36252D000400B99107 /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		D76F2B39252D045600B99107 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		D76F2B3A252D045600B99107 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		D76F2B3F252D105100B99107 /* Swift:7ObjCAssignment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift:7ObjCAssignment-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +63,12 @@
 		D76F2B1C252CFED800B99107 /* Swift&ObjCAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				D76F2B1D252CFED800B99107 /* AppDelegate.swift */,
-				D76F2B38252D001700B99107 /* Model */,
-				D76F2B1F252CFED800B99107 /* SceneDelegate.swift */,
-				D76F2B21252CFED800B99107 /* ViewController.swift */,
 				D76F2B23252CFED800B99107 /* Main.storyboard */,
+				D76F2B21252CFED800B99107 /* ViewController.swift */,
+				D76F2B38252D001700B99107 /* Model */,
+				D76F2B3C252D046300B99107 /* ViewModel */,
+				D76F2B1F252CFED800B99107 /* SceneDelegate.swift */,
+				D76F2B1D252CFED800B99107 /* AppDelegate.swift */,
 				D76F2B26252CFED800B99107 /* Assets.xcassets */,
 				D76F2B28252CFED800B99107 /* LaunchScreen.storyboard */,
 				D76F2B2B252CFED800B99107 /* Info.plist */,
@@ -78,6 +83,16 @@
 				D76F2B36252D000400B99107 /* Account.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D76F2B3C252D046300B99107 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D76F2B39252D045600B99107 /* ViewModel.h */,
+				D76F2B3A252D045600B99107 /* ViewModel.m */,
+				D76F2B3F252D105100B99107 /* Swift:7ObjCAssignment-Bridging-Header.h */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +169,7 @@
 			files = (
 				D76F2B22252CFED800B99107 /* ViewController.swift in Sources */,
 				D76F2B37252D000400B99107 /* Account.m in Sources */,
+				D76F2B3B252D045600B99107 /* ViewModel.m in Sources */,
 				D76F2B1E252CFED800B99107 /* AppDelegate.swift in Sources */,
 				D76F2B20252CFED800B99107 /* SceneDelegate.swift in Sources */,
 			);
