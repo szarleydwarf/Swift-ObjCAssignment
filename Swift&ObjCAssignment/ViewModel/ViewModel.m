@@ -21,6 +21,7 @@
 }
 
 - (void) parseJSON {
+    accounts = [[NSMutableArray alloc]init];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"json"];
       
     NSData* data = [NSData dataWithContentsOfFile:path];
@@ -32,7 +33,7 @@
     } else {
         for (NSDictionary* d in json) {
             Account* a = [[Account alloc]initWithDictionary:d];
-            NSLog(@"Doing some json parsing %@", [a getAccountName]);
+            NSLog(@"account  %@", [a getAccountName]);
             [accounts addObject:a];
         }
     }
