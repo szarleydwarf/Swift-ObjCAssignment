@@ -12,21 +12,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Account : NSObject
 
-@property (nonatomic) NSString* accountName;
-@property (nonatomic) NSString* accountNumber;
-@property (nonatomic) float accountBalance;
+@property (nonatomic) NSString* name;
+@property (nonatomic) NSString* title;
+@property (nonatomic) NSString* number;
+@property float balance;
+@property (nonatomic) NSString* currencyCode;
 
 - (Account*)initWithDictionary:(NSDictionary*) d;
 
-- (void)setAccountName:(NSString * _Nonnull)accountName;
-- (void)setAccountNumber:(NSString * _Nonnull)accountNumber;
-- (void)setAccountBalance:(float)accountBalance;
+- (void)setAccName:(NSString * _Nonnull)accountName;
+- (void)setAccNumber:(NSString * _Nonnull)accountNumber;
+- (void)setAccBalance:(float)accountBalance;
+- (void)setAccTitle:(NSString * _Nonnull)title;
+- (void)setAccCurrencyCode:(NSString * _Nonnull)currencyCode;
 
+- (NSString*)getName;
+- (NSString*)getTitle;
+- (NSString*)getNumber;
+- (float)getBalance;
+- (NSString*)getCurrencyCode;
 
-- (NSString*)getAccountName;
-- (float)getAccountBalance;
-- (NSString*)getAccountNumber;
-
+-(NSString*)getCurrencySymbol;
 @end
 
 NS_ASSUME_NONNULL_END

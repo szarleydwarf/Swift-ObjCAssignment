@@ -10,39 +10,63 @@
 
 @implementation Account
 
-@synthesize accountName, accountNumber, accountBalance;
+@synthesize name, title, number, balance, currencyCode;
 
 - (Account*)initWithDictionary:(NSDictionary*) d {
-    accountName = d[@"kind"];
-    accountNumber = d[@"number"];
-    accountBalance = [d[@"balance"] floatValue];
+    self.name = d[@"kind"];
+    self.title = d[@"title"];
+    self.number = d[@"number"];
+    self.balance = [d[@"balance"] floatValue];
+    self.currencyCode = d[@"currency"];
     
     return self;
 }
 
-
-- (void)setAccountName:(NSString *)accountName {
-    self.accountName = accountName;
+- (void)setAccName:(NSString * _Nonnull)accountName{
+    self.name = accountName;
 }
 
-- (void)setAccountNumber:(NSString * _Nonnull)accountNumber {
-    self.accountNumber = accountNumber;
+- (void)setAccNumber:(NSString * _Nonnull)accountNumber {
+    self.number = accountNumber;
 }
 
-- (void)setAccountBalance:(float)accountBalance {
-    self.accountBalance = accountBalance;
+- (void)setAccBalance:(float)accountBalance {
+    self.balance = accountBalance;
 }
 
-- (NSString*)getAccountName {
-    return self.accountName;
+- (void)setAccTitle:(NSString * _Nonnull)accountTitle {
+    self.title = accountTitle;
 }
 
-- (float)getAccountBalance {
-    return self.accountBalance;
+- (void)setAccCurrencyCode:(NSString * _Nonnull)accountCurrencyCode {
+    self.currencyCode = accountCurrencyCode;
 }
 
-- (NSString*)getAccountNumber {
-    return self.accountNumber;
+- (NSString*)getName {
+    return self.name;
+}
+
+- (NSString*)getTitle {
+    return self.title;
+}
+
+- (NSString*)getNumber {
+    return self.number;
+}
+
+- (float)getBalance {
+    return self.balance;
+}
+
+- (NSString*)getCurrencyCode {
+    return self.currencyCode;
+}
+
+-(NSString*)getCurrencySymbol {
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:self.currencyCode];
+    NSString *currencySymbol = [NSString stringWithFormat:@"%@",[locale displayNameForKey:NSLocaleCurrencySymbol value:self.currencyCode]];
+    NSLog(@"Currency Symbol : %@", currencySymbol);
+    return currencySymbol;
 }
 
 @end

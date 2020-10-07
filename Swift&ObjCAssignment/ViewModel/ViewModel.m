@@ -33,7 +33,6 @@
     } else {
         for (NSDictionary* d in json) {
             Account* a = [[Account alloc]initWithDictionary:d];
-            NSLog(@"account  %@", [a getAccountName]);
             [accounts addObject:a];
         }
     }

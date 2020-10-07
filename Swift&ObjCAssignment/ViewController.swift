@@ -31,7 +31,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         viewModel.parseJSON()
         accountsArray = viewModel.getAccounts() as! [Account]
-        print(accountsArray)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,10 +39,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.selfIdentifier, for: indexPath)
+        let a:Account = accountsArray[indexPath.row]
         
-        
-        cell.textLabel?.text = "Account name: \(accountsArray[indexPath.row].accountName)"
-        cell.detailTextLabel?.text = "Account #:\(accountsArray[indexPath.row].accountNumber) - Balance: \(accountsArray[indexPath.row].accountBalance)"
+        cell.textLabel?.text = "Account name: \(a.title): \(a.name) "
+        cell.detailTextLabel?.text = "Account #:\(a.number) - Balance: \(a.getCurrencySymbol()) \(a.balance)"
         
         return cell
     }
