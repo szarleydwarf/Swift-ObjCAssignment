@@ -11,13 +11,15 @@
 @implementation ViewModel
 @synthesize accounts;
 
-- (NSArray*)getAccounts {
+
+- (NSMutableArray*)getAccounts {
     return accounts;
 }
 
-- (void) setAccounts:(NSArray<Account *> * _Nonnull)accounts {
+- (void) setAccounts:(NSMutableArray<Account *> * _Nonnull)accounts {
     self.accounts = accounts;
 }
+
 - (void) parseJSON {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"accounts" ofType:@"json"];
       
@@ -31,6 +33,7 @@
         for (NSDictionary* d in json) {
             Account* a = [[Account alloc]initWithDictionary:d];
             NSLog(@"Doing some json parsing %@", [a getAccountName]);
+            [accounts addObject:a];
         }
     }
 }

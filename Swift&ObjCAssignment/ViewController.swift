@@ -23,24 +23,31 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    let selfIdentifier:String = "cell"
     let viewModel = ViewModel()
+    var accountsArray:[Account] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.parseJSON()
+        accountsArray = viewModel.getAccounts() as! [Account]
+        print(accountsArray)
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return accountsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.selfIdentifier, for: indexPath)
         
+        
+        cell.textLabel?.text = accountsArray[indexPath.row].accountName
+        cell.detailTextLabel?.text = accountsArray[indexPath.row].accountNumber + "\n" + accountsArray[indexPath.row].accountBalance
         
         return cell
     }
     
-
+    
 }
 

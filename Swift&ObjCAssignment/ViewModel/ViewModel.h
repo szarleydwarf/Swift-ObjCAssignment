@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewModel : NSObject
 
-@property (nonatomic) NSArray<Account*>*accounts;
+@property (nonatomic) NSMutableArray<Account*>*accounts;
 
-- (NSArray*)getAccounts;
-- (void) setAccounts:(NSArray<Account *> * _Nonnull)accounts;
+- (NSMutableArray*)getAccounts;
+- (void) setAccounts:(NSMutableArray<Account *> * _Nonnull)accounts;
 - (void) parseJSON;
 @end
 
