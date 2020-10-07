@@ -42,8 +42,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.selfIdentifier, for: indexPath)
         
         
-        cell.textLabel?.text = accountsArray[indexPath.row].accountName
-        cell.detailTextLabel?.text = accountsArray[indexPath.row].accountNumber + "\n" + accountsArray[indexPath.row].accountBalance
+        cell.textLabel?.text = "Account name: \(accountsArray[indexPath.row].accountName)"
+        cell.detailTextLabel?.text = "Account #:\(accountsArray[indexPath.row].accountNumber) - Balance: \(accountsArray[indexPath.row].accountBalance)"
         
         return cell
     }

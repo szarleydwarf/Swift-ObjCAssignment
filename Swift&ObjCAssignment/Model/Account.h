@@ -14,17 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSString* accountName;
 @property (nonatomic) NSString* accountNumber;
-@property (nonatomic) NSString* accountBalance;
+@property (nonatomic) float accountBalance;
 
 - (Account*)initWithDictionary:(NSDictionary*) d;
 
 - (void)setAccountName:(NSString * _Nonnull)accountName;
 - (void)setAccountNumber:(NSString * _Nonnull)accountNumber;
-- (void)setAccountBalance:(NSString * _Nonnull)accountBalance;
+- (void)setAccountBalance:(float)accountBalance;
 
 
 - (NSString*)getAccountName;
-- (NSString*)getAccountBalance;
+- (float)getAccountBalance;
 - (NSString*)getAccountNumber;
 
 @end

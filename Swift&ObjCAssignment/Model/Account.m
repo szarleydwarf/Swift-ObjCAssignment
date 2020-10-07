@@ -15,7 +15,7 @@
 - (Account*)initWithDictionary:(NSDictionary*) d {
     accountName = d[@"kind"];
     accountNumber = d[@"number"];
-    accountBalance = d[@"balance"];
+    accountBalance = [d[@"balance"] floatValue];
     
     return self;
 }
@@ -29,7 +29,7 @@
     self.accountNumber = accountNumber;
 }
 
-- (void)setAccountBalance:(NSString * _Nonnull)accountBalance {
+- (void)setAccountBalance:(float)accountBalance {
     self.accountBalance = accountBalance;
 }
 
@@ -37,7 +37,7 @@
     return self.accountName;
 }
 
-- (NSString*)getAccountBalance {
+- (float)getAccountBalance {
     return self.accountBalance;
 }
 
